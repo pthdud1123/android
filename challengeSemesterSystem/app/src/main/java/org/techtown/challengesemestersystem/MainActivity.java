@@ -1,20 +1,17 @@
 package org.techtown.challengesemestersystem;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar toolbar=(androidx.appcompat.widget.Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);//이 액티비티에서 툴바를 사용하겠다는 의미
         ActionBar actionBar=getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);//툴바 왼쪽에 버튼 추가할때 1
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);//2
+        actionBar.setDisplayHomeAsUpEnabled(true);//뒤로가기 버튼
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
         actionBar.setTitle("알파카");
         //actionBar.setDisplayShowTitleEnabled(false);
 
@@ -84,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-       fragmentTransaction.replace(R.id.fragment_layout,fragmentHome).commitAllowingStateLoss();
+        fragmentTransaction.replace(R.id.fragment_layout,fragmentHome).commitAllowingStateLoss();
 
     }
     public void clickMainButton(int a){
@@ -101,11 +98,5 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
         }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //switch(item.getItemId())
-        return super.onOptionsItemSelected(item);
     }
 }
