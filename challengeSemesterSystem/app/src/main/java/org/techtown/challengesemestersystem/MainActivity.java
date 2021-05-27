@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private FragmentHome fragmentHome;
-    private FragmentArlam fragmentArlam;
+    private FragmentAlarm fragmentAlarm;
     private FragmentMessage fragmentMessage;
     private Button btn_home,btn_message,btn_arlam;
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager=getSupportFragmentManager();
         fragmentTransaction=fragmentManager.beginTransaction();
         fragmentHome=new FragmentHome();
-        fragmentArlam=new FragmentArlam();
+        fragmentAlarm =new FragmentAlarm();
         fragmentMessage=new FragmentMessage();
         btn_home=(Button)findViewById(R.id.button_home);
         btn_arlam=(Button)findViewById(R.id.button_arlam);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.fragment_layout,fragmentHome).commitAllowingStateLoss();
                 break;
             case 1:
-                fragmentTransaction.replace(R.id.fragment_layout,fragmentArlam).commitAllowingStateLoss();
+                fragmentTransaction.replace(R.id.fragment_layout, fragmentAlarm).commitAllowingStateLoss();
                 break;
             case 2:
                 fragmentTransaction.replace(R.id.fragment_layout,fragmentMessage).commitAllowingStateLoss();

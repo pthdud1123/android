@@ -41,7 +41,6 @@ public class AlarmAdapter extends BaseAdapter {
         if(convertView==null){
             LayoutInflater inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView=inflater.inflate(R.layout.alarm_custom_listview,parent,false);
-
         }
 
         ImageView img_member=(ImageView)convertView.findViewById(R.id.img_alarm_member);
@@ -58,7 +57,7 @@ public class AlarmAdapter extends BaseAdapter {
     }
 
     //아이템 데이터 추가를 위한 함수
-    public void addItem(Drawable img, String text){
+    public void addItem_alarm(Drawable img, String text){
         AlarmItem alarmItem=new AlarmItem();
 
         alarmItem.setIcon(img);
