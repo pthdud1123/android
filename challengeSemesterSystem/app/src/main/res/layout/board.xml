@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentHome"
-    android:orientation="vertical"
-    android:background="#FFAAAA">
+    android:orientation="vertical">
     <ListView
-        android:id="@+id/listview_1"
+        android:id="@+id/listview_board"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
